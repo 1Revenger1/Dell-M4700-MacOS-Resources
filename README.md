@@ -48,7 +48,7 @@ You can get more information about these by clicking on the links, which leads t
 
 ### Devices
 * Pci(0x1,0x0) - Set dual link for 1080p Display, set 10bit panel, set connectors to connect to internal/external displays. [More Details](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Radeon.en.md)  
-The framebuffer is actually the Buri Framebuffer from within the AMD 7000 Series kext, with the first connector modified to work with the internal LVDS display.  
+The connectors is actually the Buri connectors from within the AMD 7000 Series kext, with the first connector modified to work with the internal LVDS display.  
 * Pci(0x1b,0x0) - Set audio layout for AppleALC.kext to fix interal speakers and ports
 * Pci(0x1c,0x7) - Fixes SD Card slot by allowing it to use the apple SD card kext within MacOS.
 
