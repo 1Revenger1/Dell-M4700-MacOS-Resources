@@ -1,7 +1,7 @@
 # Dell Precision M4700 MacOS
     
 Releasing this to help others with Dell Precision M4700s.  
-Please do not blindly copy. Understand and read the links provided, and realize that this may be out of date depending on when you read this. I would recommend reading [this guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/) and [this first contact page](https://internet-install.gitbook.io/macos-internet-install/) as well before proceeding
+Please do not blindly copy. Understand and read the links provided, and realize that this may be out of date depending on when you read this. I would recommend reading [this guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/) and [this first contact page](https://internet-install.gitbook.io/macos-internet-install/) as well before proceeding. Anything Graphics related in this will *not* work if you have any of the Nvidia cards
 
 ## Specs
 
