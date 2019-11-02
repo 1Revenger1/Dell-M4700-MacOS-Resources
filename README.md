@@ -13,7 +13,7 @@ I would recommend reading [this guide](https://hackintosh.gitbook.io/-r-hackinto
 |---|---|
 | RAM  | 4 x 4GB 1600Mhz DDR3  |
 | GPU  | AMD Firepro Mobility M4000  |
-| Screen  | 1080p IPS (Connects vs eDP -> 10 bit LVDS)  |
+| Screen  | 1080p IPS (Connects via eDP -> 10 bit LVDS)  |
 | Wifi  |  Broadcom BCM94352Z  |
 | Trackpad  | Alphs Dual Point - V3 Rushmore  |
 
