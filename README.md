@@ -31,7 +31,8 @@ You can get more information about these by clicking on the links, which leads t
   * Includes SMCBatteryManager, SMCProcessor, and SMCSuperIO as well, which I use as well  
 * [USBInjectAll](https://github.com/RehabMan/OS-X-USB-Inject-All) - Injects all the USB ports in SSDT-UIAC as macOS does not pick up all the USB Ports by itself.
 * [VoodooPS2Controler]() - Fixes PS2 Trackpad and Keyboard (Not linked yet, I compiled my own based off of Dr. Hurtz and Rehabman's repo)
-* [BrcmFirmwareRepo/BrcmPatchRAM2 (Acidanthera)](https://github.com/acidanthera/BrcmPatchRAM) - Allows the Bluetooth part of the 94352Z to work with macOS.
+* [BrcmFirmwareRepo/BrcmPatchRAM3 (Acidanthera)](https://github.com/acidanthera/BrcmPatchRAM) - Allows the Bluetooth part of the 94352Z to work with macOS.
+  * You need BrcmPatchRAM3, BrcmFirmwareData, and BrcmBluetoothInject for Catalina
 * [IntelMausiEthernet](https://github.com/Mieze/IntelMausiEthernet) - Fixes ethernet port.
 * [AppleALC]() - Fixes speakers and 3.5mm ports
 
