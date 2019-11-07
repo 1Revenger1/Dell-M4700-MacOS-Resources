@@ -18,8 +18,13 @@ I would recommend reading [this guide](https://hackintosh.gitbook.io/-r-hackinto
 | Trackpad  | Alphs Dual Point - V3 Rushmore  |
 
 ## Graphics
-I was able to get my iGPU enabled , which is normally disabled when an AMD gpu is inserted.
-TODO: add steps to enable iGPU
+I was able to get my iGPU enabled , which is normally disabled when an AMD gpu is inserted.  
+
+1. Download the exe to update the BIOS from Dell's website
+2. Extract bios with binwalker
+ `binwalk -e whatever.exe`
+3. Use pfsextractor on the uncompressed output
+4. TODO: Add more steps to use rom from exe
 
 ## Kexts
 You can get more information about these by clicking on the links, which leads to their respective github repo.
@@ -53,9 +58,10 @@ You can get more information about these by clicking on the links, which leads t
 
 * dart=0 - Disables VT-d for macos
 * radpg=15 - WhateverGreen power gating tweaks for Radeon GPUs
+* shikigva=40 - Tell WhateverGreen to replace appleGVA board id
+* shiki-id=Mac-FC02E91DDD3FA6A4 - iMac13,2 board id. Allows iGPU to be used for AirPlay/H.264 Encoding/Decoding with the main output coming out of the AMD gpu still.
 
 ### Devices
-* Pci(0x2,0x0) - Set connectorless iGPU platform to use for Intel Quicksync.
 * Pci(0x1,0x0) - Set dual link for 1080p Display, set 10bit panel, set connectors to connect to internal/external displays. [More Details](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Radeon.en.md)  
 The connectors is actually the Buri connectors from within the AMD 7000 Series kext, with the first connector modified to work with the internal LVDS display.  
 * Pci(0x1b,0x0) - Set audio layout for AppleALC.kext to fix interal speakers and ports
