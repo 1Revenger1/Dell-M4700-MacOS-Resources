@@ -168,6 +168,12 @@
 				<integer>4</integer>
 				<key>framebuffer-stolenmem</key>
 				<data>AAAABA==</data>
+				<key>applbkl</key>
+				<data>AQAAAA==</data>
+				<key>applbkl-name</key>
+				<data>RjE0VHh4eHgA</data>
+				<key>applbkl-data</key>
+				<data>ABEAAAAEAAsAEAAUABoAIwArADQAPwBOAGIAeQCUALUA2gD/</data>
 			</dict>
 		</dict>
 		<key>USB</key>
