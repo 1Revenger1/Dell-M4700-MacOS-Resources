@@ -1,4 +1,4 @@
-DefinitionBlock ("", "SSDT", 1, "DELL ", "SD/MMC", 0x00021500)
+DefinitionBlock ("", "SSDT", 1, "GWYD ", "SD/MMC", 0x00021500)
 {
     External (_SB_.PCI0.RP08, DeviceObj)
     
