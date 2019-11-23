@@ -1,6 +1,6 @@
 # Dell Precision M4700 MacOS
 
-###Changelog: 
+Changelog:
 - Update 11/1/2019   Provided plist is for Opencore now  
 - Update 11/22/2019 Added additional Configs for Clover, Intel, and Nvidia setups
 
