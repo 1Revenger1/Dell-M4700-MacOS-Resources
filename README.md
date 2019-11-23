@@ -9,7 +9,7 @@ ___
 Releasing this to help others with Dell Precision M4700s.  
 I would recommend reading [this guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/) and [this first contact page](https://internet-install.gitbook.io/macos-internet-install/) before proceeding. While these guides use clover, it still much needed info to begin understanding what's going on in opencore. Go [here for an opencore guide](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/) which explains the settings needed for Ivy Bridge systems
 
-## Tested Specs
+### Tested Specs
 
 | |Laptop 1| Laptop 2 |
 |---|---|---|
@@ -19,9 +19,14 @@ I would recommend reading [this guide](https://hackintosh.gitbook.io/-r-hackinto
 | Screen  | 1080p IPS 30 bit depth  | 1080p IPS 24 bit depth |
 | Wifi  |  Broadcom BCM94352Z  | Dell DW1510 |
 | Trackpad  | Alphs Dual Point - V3 Rushmore  | |
+| BIOS | A17 | A19 |
 
 ___
-## Kexts
+### Installing
+* Do not use provided SSDT-CPUPM - install macOS first then create your own. Do not drop MCFG until you provide an SSDT-CPUPM.
+* You most likely should make your own SSDT-UIAC as well - I don't know how this differs across similar laptops, or if it's the same. Take SSDT-UIAC out until you are done installing and can map your own USB ports.
+___
+### Kexts
 You can get more information about these by clicking on the links, which leads to their respective github repo.
 
 * [Lilu](https://github.com/acidanthera/Lilu) - Needed for kexts such as AirportBrcmFixup and WhateverGreen to function.  
@@ -148,6 +153,7 @@ ___
 * SSDT-SDMMC - Adds the missing SD card device in the DSDT
 * SSDT-XOSI - If checking Windows 7 or 8, check if it's Darwin as well.
 * SSDT-BRTK - Sends PS2 Commands when brightness keys are pressed.
+  * Broken w/ Clover as OSID gets mangled with _OSI to XOSI.
 
 ___
 ### Credits
