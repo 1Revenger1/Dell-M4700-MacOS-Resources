@@ -1,10 +1,11 @@
 # Dell Precision M4700 MacOS
 
-##### Update 11/1/2019   Provided plist is for Opencore now  
-##### Update 11/22/2019 Added additional Configs for Clover, Intel, and Nvidia setups
+###Changelog: 
+- Update 11/1/2019   Provided plist is for Opencore now  
+- Update 11/22/2019 Added additional Configs for Clover, Intel, and Nvidia setups
 
 ### Help Wanted! Looking for a user with the M4000 and the not 30 bit/eDP internal display!
-
+___
 Releasing this to help others with Dell Precision M4700s.  
 I would recommend reading [this guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/) and [this first contact page](https://internet-install.gitbook.io/macos-internet-install/) before proceeding. While these guides use clover, it still much needed info to begin understanding what's going on in opencore. Go [here for an opencore guide](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/) which explains the settings needed for Ivy Bridge systems
 
@@ -20,7 +21,7 @@ I would recommend reading [this guide](https://hackintosh.gitbook.io/-r-hackinto
 | Trackpad  | Alphs Dual Point - V3 Rushmore  | |
 
 ## Graphics
-For whatever GPU is driving the main display, add the below to get a full range of backlight values.
+For whatever GPU is driving the internal display, add the below to get a full range of backlight values.
 ```dtd
 <key>applbkl</key>
 <data>AQAAAA==</data>
@@ -29,7 +30,9 @@ For whatever GPU is driving the main display, add the below to get a full range 
 <key>applbkl-data</key>
 <data>ABEAAAAEAAsAEAAUABoAIwArADQAPwBOAGIAeQCUALUA2gD/</data>
 ```
-This tells applbkl to force backlight injection, and to pass in a set of hex values from 0x0 to 0xff for the "F14Txxxx" display.
+This tells applbkl to force backlight injection, and to pass in a set of hex values from 0x0 to 0xff for the "F14Txxxx" display. Without these properties, the backlight still works, but you don't get the full range of brightness.
+
+If you have an NVidia GPU, and Optimus is *enabled*, then the iGPU is running the main display, and you want to input the Intel graphics properties. If you have Optimus *disabled*, then go to the Nvidia section.
 
 ### AMD 
 Use the AMD config and remove device properties if you don't need them.
@@ -66,11 +69,29 @@ Use the below device properties as well if the panel has a 30 bit depth, or conn
 ```
 
 ### NVidia
-
-
+Nothing needed - though backlight does not work.
 
 ### Intel
+Below device properties are needed in order for the iGPU to drive the main display.
 
+```dtd
+<key>AAPL,ig-platform-id</key>
+<data>BABmAQ==</data>
+<key>framebuffer-con1-alldata</key>
+<data>AgUAAAAEAAAHBAAAAwQAAAAEAACBAAAABAYAAAAEAACBAAAA</data>
+<key>framebuffer-con1-enable</key>
+<integer>1</integer>
+<key>framebuffer-memorycount</key>
+<integer>2</integer>
+<key>framebuffer-patch-enable</key>
+<integer>1</integer>
+<key>framebuffer-pipecount</key>
+<integer>2</integer>
+<key>framebuffer-portcount</key>
+<integer>4</integer>
+<key>framebuffer-stolenmem</key>
+<data>AAAABA==</data>
+```
 
 ### Enabling iGPU
 If Optimus is set to "Disabled" or you are otherwise forced to use the iGPU - it is possible to enable the iGPU to use headless for airPlay and h.264 encoding using the below instructions:
