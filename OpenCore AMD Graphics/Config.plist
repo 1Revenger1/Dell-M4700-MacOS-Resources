@@ -459,7 +459,7 @@
       <key>HideSelf</key>
       <true/>
       <key>ShowPicker</key>
-      <false/>
+      <true/>
       <key>UsePicker</key>
       <true/>
       <key>PollAppleHotKeys</key>
