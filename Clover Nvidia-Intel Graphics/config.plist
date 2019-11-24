@@ -104,11 +104,6 @@
 				<string>MCFG</string>
 			</dict>
 		</array>
-		<key>SSDT</key>
-		<dict>
-			<key>PluginType</key>
-			<string>1</string>
-		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
