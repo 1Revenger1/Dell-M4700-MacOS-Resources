@@ -16,14 +16,14 @@ I would recommend reading [this guide](https://hackintosh.gitbook.io/-r-hackinto
 | CPU |  I7-3740QM  |  I7-3940XM  |
 | RAM  | 4 x 4GB 1600Mhz DDR3  | 16GB DDR3 |
 | GPU  | AMD Firepro Mobility M4000  |  NVidia Quadro K1000M |
-| Screen  | 1080p IPS 30 bit depth  | 1080p IPS 24 bit depth |
+| Screen  | 1080p IPS 30 bit depth  | 1080p TN 24 bit depth |
 | Wifi  |  Broadcom BCM94352Z  | Dell DW1510 |
 | Trackpad  | Alphs Dual Point - V3 Rushmore  | |
 | BIOS | A17 | A19 |
 
 ___
 ### Installing
-* Do not use provided SSDT-CPUPM - install macOS first then create your own. Do not drop MCFG until you provide an SSDT-CPUPM.
+* Do not use provided SSDT-CPUPM - install macOS first then create your own. Do not drop MCFG until you provide your own SSDT-CPUPM.
 * You most likely should make your own SSDT-UIAC as well - I don't know how this differs across similar laptops, or if it's the same. Take SSDT-UIAC out until you are done installing and can map your own USB ports.
 ___
 ### Kexts
@@ -61,7 +61,7 @@ You can get more information about these by clicking on the links, which leads t
 
 ___
 ### Graphics
-For whatever GPU is driving the internal display, add the below to get a full range of backlight values.
+For whatever GPU is driving the internal display, add the below device properties to get a full range of backlight values. If you would like to edit the curve, convert applbkl-data from base64 to hex. The values are sets of 2 bytes. Ignore the first two bytes (0x00, 0x11) and edit the rest of the curve. It is currently set to 0x0000 - 0x00ff as that gives the full range for the IPS, 30bit depth, screen.  
 ```dtd
 <key>applbkl</key>
 <data>AQAAAA==</data>
