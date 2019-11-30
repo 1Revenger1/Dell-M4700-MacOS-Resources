@@ -40,14 +40,6 @@
       </dict>
       <dict>
         <key>Comment</key>
-        <string>USB Inject All</string>
-        <key>Path</key>
-        <string>SSDT-UIAC.aml</string>
-        <key>Enabled</key>
-        <true/>
-      </dict>
-      <dict>
-        <key>Comment</key>
         <string>XOSI</string>
         <key>Path</key>
         <string>SSDT-XOSI.aml</string>
@@ -105,26 +97,6 @@
         <data>WE9TSQ==</data>
         <key>Count</key>
         <integer>14</integer>
-      </dict>
-      <dict>
-        <key>Comment</key>
-        <string>EHC1 to EH01</string>
-        <key>Enabled</key>
-        <true/>
-        <key>Find</key>
-        <data>RUhDMQ==</data>
-        <key>Replace</key>
-        <data>RUgwMQ==</data>
-      </dict>
-      <dict>
-        <key>Comment</key>
-        <string>EHC2 to EH02</string>
-        <key>Enabled</key>
-        <true/>
-        <key>Find</key>
-        <data>RUhDMg==</data>
-        <key>Replace</key>
-        <data>RUgwMg==</data>
       </dict>
       <dict>
         <key>Comment</key>
@@ -398,10 +370,8 @@
         <string>Contents/Info.plist</string>
         <key>Enabled</key>
         <true/>
-        <key>ExecutablePath</key>
-        <string>Contents/MacOS/USBInjectAll</string>
         <key>BundlePath</key>
-        <string>USBInjectAll.kext</string>
+        <string>USBMap.kext</string>
       </dict>
       <dict>
         <key>Comment</key>
