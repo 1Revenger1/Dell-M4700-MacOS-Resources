@@ -24,7 +24,7 @@ I would recommend reading [this guide](https://hackintosh.gitbook.io/-r-hackinto
 ___
 ### Installing
 * Do not use provided SSDT-CPUPM - install macOS first then create your own. Do not drop MCFG until you provide your own SSDT-CPUPM.
-* You most likely should make your own SSDT-UIAC as well - I don't know how this differs across similar laptops, or if it's the same. Take SSDT-UIAC out until you are done installing and can map your own USB ports.
+* You most likely should make your own USBMap.kext as well - I don't know how this differs across similar laptops, or if it's the same. If your USB ports do not work in macOS (get a "waiting for root device" error), then you may need to remove it and use USBInjectAll.kext until you get into macOS and can map them properly.
 ___
 ### Kexts
 You can get more information about these by clicking on the links, which leads to their respective github repo.
