@@ -75,8 +75,7 @@ This tells applbkl to force backlight injection, and to pass in a set of hex val
 If you have an NVidia GPU, and Optimus is *enabled*, then the iGPU is running the main display, and you want to input the Intel graphics properties. If you have Optimus *disabled*, then go to the Nvidia section.
 
 #### AMD 
-Use the AMD config and remove device properties if you don't need them.
-These properties below are needed
+These properties below are needed for the gpu to work at all.
 ```dtd
 <key>@0,display-dual-link</key>
 <data>AQAAAA==</data>
@@ -134,13 +133,17 @@ Below device properties are needed in order for the iGPU to drive the main displ
 ```
 
 #### Enabling iGPU
-If Optimus is set to "Disabled" or you are otherwise forced to use the iGPU - it is possible to enable the iGPU to use headless for airPlay and h.264 encoding using the below instructions:
+If Optimus is set to "Disabled" or you are otherwise forced to use the dGPU - it is possible to enable the iGPU to use headless for airPlay and h.264 encoding using the below instructions:
 
+// TODO: General idea below, flesh out below and add screenshots possibly?
 1. Download the exe to update the BIOS from Dell's website
 2. Extract bios with binwalker
  `binwalk -e whatever.exe`
 3. Use pfsextractor on the uncompressed output
-4. TODO: Add more steps to use rom from exe
+4. Use UEFITools to find the Setup section and extract the body of that Image.
+5. Use IFRExtractor on the extracted image. You should get a text file output.
+6. Look for settings to enable the iGPU.
+7. Use setup_var to change
 
 ___
 ### SSDTs
