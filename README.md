@@ -3,8 +3,6 @@
 Changelog:
 - Update 11/1/2019   Provided plist is for Opencore now  
 - Update 11/22/2019 Added additional Configs for Clover, Intel, and Nvidia setups
-
-### Help Wanted! Looking for a user with the M4000 and the not 30 bit/eDP internal display!
 ___
 Releasing this to help others with Dell Precision M4700s.  
 I would recommend reading [this guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/) and [this first contact page](https://internet-install.gitbook.io/macos-internet-install/) before proceeding. While these guides use clover, it still much needed info to begin understanding what's going on in opencore. Go [here for an opencore guide](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/) which explains the settings needed for Ivy Bridge systems
@@ -16,7 +14,7 @@ I would recommend reading [this guide](https://hackintosh.gitbook.io/-r-hackinto
 | CPU |  I7-3740QM  |  I7-3940XM  |
 | RAM  | 4 x 4GB 1600Mhz DDR3  | 16GB DDR3 |
 | GPU  | AMD Firepro Mobility M4000  |  NVidia Quadro K1000M |
-| Screen  | 1080p IPS 30 bit depth  | 1080p TN 24 bit depth |
+| Screen  | 1080p IPS | 1080p TN |
 | Wifi  |  Broadcom BCM94352Z  | Dell DW1510 |
 | Trackpad  | Alphs Dual Point - V3 Rushmore  | |
 | BIOS | A17 | A19 |
@@ -97,7 +95,7 @@ If you would like the iGPU to be used for video encoding/airplay, then use the b
 <data>TWFjLUZDMDJFOTFEREQzRkE2QTQA</data>
 ```
 
-Use the below device properties as well if the panel has a 30 bit depth, or connects over eDP
+Needed for the IPS 1080p display
 ```dtd
 <key>connectors</key>
 <data>AgAAAEAAAAAJCQEAAAAAABAAAAUAAAAAAAQAAAQDAAAACQIAAAAAABECAQEAAAAAAAQAAAQDAAAACQMAAAAAACEDAgIAAAAAAAgAAAQCAAAAAQQAAAAAABIEAwMAAAAA</data>
